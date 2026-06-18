@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+:root {
+    --netflix-red: #E50914;
+    --bg-color: #141414;
+    --text-color: #ffffff;
+    --nav-bg: rgba(20, 20, 20, 0);
+    --nav-bg-solid: rgba(20, 20, 20, 1);
+    --transition-speed: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 68px;
+    padding: 0 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background-color: var(--nav-bg);
+    transition: background-color var(--transition-speed) ease;
+}
+
+nav.scrolled {
+    background-color: var(--nav-bg-solid);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.logo {
+    color: var(--netflix-red);
+    font-weight: 800;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.anime-badge {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+    background-color: var(--netflix-red);
+    padding: 2px 6px;
+    border-radius: 3px;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color var(--transition-speed);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: white;
+    font-weight: 600;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.nav-right span {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.profile-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.profile-icon img {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+}
+
+.profile-icon i {
+    font-size: 0.8rem;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 85vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-vignette {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(20, 20, 20, 0.7) 0%,
+            rgba(20, 20, 20, 0.3) 50%,
+            rgba(20, 20, 20, 1) 100%);
+}
+
+.hero-content {
+    width: 40%;
+    padding-left: 4%;
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.n-icon {
+    width: 25px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.series-label {
+    color: #ccc;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(#fff, #999);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.match {
+    color: #46d369;
+}
+
+.age-rating {
+    border: 1px solid #fff;
+    padding: 0 4px;
+}
+
+.hd {
+    border: 1px solid #fff;
+    padding: 0 4px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    margin-top: 10px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: opacity var(--transition-speed), transform 0.1s;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn-play {
+    background-color: #fff;
+    color: #000;
+}
+
+.btn-play:hover {
+    opacity: 0.8;
+}
+
+.btn-more {
+    background-color: rgba(109, 109, 110, 0.7);
+    color: #fff;
+}
+
+.btn-more:hover {
+    background-color: rgba(109, 109, 110, 0.4);
+}
+
+/* Rows & Carousels */
+.main-content {
+    padding: 0;
+    margin-top: -80px;
+    /* Overlap with hero vignette */
+    position: relative;
+    z-index: 5;
+}
+
+.row {
+    margin-bottom: 3vw;
+    position: relative;
+}
+
+.row-title {
+    color: #e5e5e5;
+    font-size: 1.4vw;
+    font-weight: 600;
+    margin: 0 4% 0.5em 4%;
+    transition: color var(--transition-speed);
+}
+
+.row-title:hover {
+    color: #fff;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: visible;
+    /* Changed from hidden to allow cards to pop out on hover */
+}
+
+/* Keep the buttons hidden inside container unless hovered */
+.carousel-btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2vw;
+    border: none;
+    cursor: pointer;
+    z-index: 50;
+    opacity: 0;
+    transition: opacity var(--transition-speed), transform 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 22.5vw;
+}
+
+.carousel-container:hover .carousel-btn {
+    opacity: 1;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-btn:active {
+    transform: scale(0.9);
+}
+
+.carousel-btn.left {
+    left: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.carousel-btn.right {
+    right: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.carousel-scroller {
+    display: flex;
+    gap: 0.5vw;
+    padding: 1vw 4%;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    position: relative;
+    overflow-y: visible;
+    /* allow scaled cards to show */
+}
+
+.carousel-scroller::-webkit-scrollbar {
+    display: none;
+}
+
+/* Anime Card / Item */
+.anime-card {
+    flex: 0 0 15vw;
+    min-width: 15vw;
+    position: relative;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform var(--transition-speed) cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow var(--transition-speed);
+    scroll-snap-align: start;
+}
+
+.anime-card img {
+    width: 100%;
+    height: 22.5vw;
+    /* Assuming 2:3 aspect ratio for posters */
+    object-fit: cover;
+    border-radius: 4px;
+    transition: filter var(--transition-speed);
+}
+
+.anime-card:hover {
+    transform: scale(1.2);
+    z-index: 100;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.8), 0 10px 10px rgba(0, 0, 0, 0.6);
+}
+
+.anime-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1vw;
+    background: linear-gradient(to top, rgba(20, 20, 20, 1), rgba(20, 20, 20, 0.8) 50%, transparent);
+    opacity: 0;
+    transition: opacity var(--transition-speed);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.anime-card:hover .anime-card-overlay {
+    opacity: 1;
+}
+
+.card-title {
+    font-size: 1vw;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.card-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.card-btn {
+    background: #fff;
+    color: #000;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8vw;
+    border: none;
+    cursor: pointer;
+}
+
+.card-btn.add {
+    background: rgba(42, 42, 42, 0.6);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.card-btn.add:hover {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Scroll-Driven Animations using Modern Web Guidance */
+@supports ((animation-timeline: view()) and (animation-range: entry)) {
+    @keyframes carousel-enter {
+        0% {
+            opacity: 0.3;
+            transform: scale(0.9) translateX(20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1) translateX(0);
+        }
+    }
+
+    .carousel-scroller>* {
+        animation: carousel-enter linear both;
+        animation-timeline: view(inline);
+        animation-range: entry 0% cover 25%;
+    }
+}
+
+/* Footer */
+footer {
+    padding: 4rem 15%;
+    color: #737373;
+    font-size: 0.85rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.social-links i {
+    cursor: pointer;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.footer-links li {
+    cursor: pointer;
+}
+
+.footer-links li:hover {
+    text-decoration: underline;
+}
+
+.service-code {
+    border: 1px solid #737373;
+    padding: 0.5rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.service-code:hover {
+    color: #fff;
+}
+
+.copyright {
+    font-size: 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content {
+        width: 80%;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .anime-card {
+        flex: 0 0 30vw;
+        min-width: 30vw;
+    }
+
+    .anime-card img {
+        height: 45vw;
+    }
+
+    .row-title {
+        font-size: 3vw;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
