@@ -39,105 +39,105 @@ document.getElementById("right-arrow").addEventListener("click",()=>{
 const MovieList = [
     {
         title: "Avengers Endgame",
-        image: "/Home-Images/thumb-1.jpg",
+        image: "Home-Images/thumb-1.jpg",
     },
     {
         title: "Vadachennai",
-        image: "/Home-Images/thumb-2.jpg",
+        image: "Home-Images/thumb-2.jpg",
     },
     {
         title: "Thani Oruvan",
-        image: "/Home-Images/thumb-3.jpg",
+        image: "Home-Images/thumb-3.jpg",
     },
     {
         title: "mandela",
-        image: "/Home-Images/thumb-4.jpg",
+        image: "Home-Images/thumb-4.jpg",
     },
     {
         title: "Bullet Train",
-        image: "/Home-Images/thumb-5.jpg",
+        image: "Home-Images/thumb-5.jpg",
     },
     {
         title: "Thor",
-        image: "/Home-Images/thumb-6.jpg",
+        image: "Home-Images/thumb-6.jpg",
     },
     {
         title: "Fast & Furious",
-        image: "/Home-Images/thumb-7.jpg",
+        image: "Home-Images/thumb-7.jpg",
     },
     {
         title: "Thunivu",
-        image: "/Home-Images/thumb-8.jpg",
+        image: "Home-Images/thumb-8.jpg",
     }
 ];
 
 const SeriesList = [
     {
         title: "Game of Thrones",
-        image: "/Home-Images/thumb-9.jpg",
+        image: "Home-Images/thumb-9.jpg",
     },
     {
         title: "Money Heist",
-        image: "/Home-Images/thumb-10.jpg",
+        image: "Home-Images/thumb-10.jpg",
     },
     {
         title: "Breaking Bad",
-        image: "/Home-Images/thumb-11.jpg",
+        image: "Home-Images/thumb-11.jpg",
     },
     {
         title: "House of the Dragon",
-        image: "/Home-Images/thumb-12.jpg",
+        image: "Home-Images/thumb-12.jpg",
     },
     {
         title: "Loki",
-        image: "/Home-Images/thumb-13.jpg",
+        image: "Home-Images/thumb-13.jpg",
     },
     {
         title: "Heart Beat",
-        image: "/Home-Images/thumb-14.jpg",
+        image: "Home-Images/thumb-14.jpg",
     },
     {
         title: "Police Police",
-        image: "/Home-Images/thumb-15.jpg",
+        image: "Home-Images/thumb-15.jpg",
     },
     {
         title: "November Story",
-        image: "/Home-Images/thumb-16.jpg",
+        image: "Home-Images/thumb-16.jpg",
     }
 ];
 
 const AnimeList = [
     {
         title: "Deagon Ballz",
-        image: "/Home-Images/thumb-17.jpg",
+        image: "Home-Images/thumb-17.jpg",
     },
     {
         title: "Naruto",
-        image: "/Home-Images/thumb-18.jpg",
+        image: "Home-Images/thumb-18.jpg",
     },
     {
         title: "Doreamon",
-        image: "/Home-Images/thumb-19.jpg",
+        image: "Home-Images/thumb-19.jpg",
     },
     {
         title: "Suzume",
-        image: "/Home-Images/thumb-20.jpg",
+        image: "Home-Images/thumb-20.jpg",
     },
     {
         title: "Your Name",
-        image: "/Home-Images/thumb-21.jpg",
+        image: "Home-Images/thumb-21.jpg",
     },
     {
         title: "Tom & Jerry",
-        image: "/Home-Images/thumb-22.jpg",
+        image: "Home-Images/thumb-22.jpg",
     },
     {
         title: "Full Metal Achimist",
-        image: "/Home-Images/thumb-23.jpg",
+        image: "Home-Images/thumb-23.jpg",
     },
     {
         title: "Attack On Titan",
-        image: "/Home-Images/thumb-24.jpg",
+        image: "Home-Images/thumb-24.jpg",
     }
 ];
 
