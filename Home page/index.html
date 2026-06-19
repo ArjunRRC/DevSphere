@@ -14,31 +14,182 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <nav>
+    <nav class="navbar">
         <div class="p-name">
             <h1>DevSphere</h1>
         </div>
         <div class="nav-lists">
             <ul class="nav-lists__list">
-                <li>Home</li>
-                <li>Movies</li>
-                <li>Series</li>
-                <li>Anime</li>
+                <li class="nav-lists__navs"><a href="/Home page/index.html">Home</a></li>
+                <li class="nav-lists__navs"><a href="/Movies Page/movies.html">Movies</a></li>
+                <li class="nav-lists__navs"><a href="/Series Page/series.html">Series</a></li>
+                <li class="nav-lists__navs"><a href="/Anime Page/anime.html">Anime</a></li>
             </ul>
-            <div class="buttons">
+        </div>
+        <div id="search-section">
+            <div id="search-container">
+                <div class="overlay"></div>
+                <div id="search-layout">
+                    <button id="search-close" onclick="closeSearch()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button> 
+                    <input id="search" name="search" oninput="searchContent(this)" placeholder="Search here..." />
+                    <div id="search-content">
+                        
+                    </div>
+                </div>
+            </div>
+            <div id="search-icon">
+                <button onclick="openSearch()"><i class="fa-solid fa-magnifying-glass" style="color: rgb(255, 255, 255);"></i></button>
+            </div>
+        </div>
+        <div class="nav-buttons">
                 <button class="signin">Signin</button>
                 <button class="signup">Signup</button>
             </div>
-        </div>
-        <div class="menu-icon">
+        <div id="menu-icon" class="menu-icon">
             <i class="fa-solid fa-bars" style="color: rgb(255, 255, 255);"></i>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-     <div class="her-section">
-
-
+    <!-- Sidebar -->
+     <div id="sidebar">
+        <div id="menu-close">
+            <i class="fa-solid fa-xmark"></i>
+        </div>   
+        <div class="sidebar-navs">
+            <p class="sidebar-navlist"><a href="/Home page/index.html">Home</a></p>
+            <p class="sidebar-navlist"><a href="/Movies Page/movies.html">Movies</a></p>
+            <p class="sidebar-navlist"><a href="/Series Page/series.html">Series</a></p>
+            <p class="sidebar-navlist"><a href="/Anime Page/anime.html">Anime</a></p>
+        </div>
+        <div class="Sidebar-buttons">
+            <button class="sidebar-signin">Signin</button><br>
+            <button class="sidebar-signup">Signup</button>
+        </div>
      </div>
+
+    <!-- Hero Section -->
+     <div class="hero-section">
+        <div id="left-arrow">
+            <i class="fa-solid fa-arrow-left" style="color: rgb(255, 255, 255); font-size: 40px;"></i>
+        </div>
+        <div class="movie-images">
+            <div class="slide">
+                <img class="images" src="./Home-Images/movie-1.jpg">
+            </div>
+            <div class="slide">
+                <img class="images" src="./Home-Images/movie-2.jpg">
+            </div>
+            <div class="slide">
+                <img class="images" src="./Home-Images/movie-3.jpg">
+            </div> 
+        </div>
+        <div id="right-arrow">
+            <i class="fa-solid fa-arrow-right" style="color: rgb(255, 255, 255); font-size: 40px;"></i>
+        </div>  
+         <div class="watchnow">
+                <button>Watch Now</button>
+            </div> 
+     </div>
+
+     <!-- Movies Section -->
+      
+        <div class="title">
+               <h2>Movies</h2>
+          </div>
+        <div id="movies"></div>
+
+        <!-- Series Section -->
+          <div class="title">
+               <h2>Series</h2>
+          </div>
+        <div id="series"></div>
+
+        <!-- Anime Section -->
+         <div class="title">
+               <h2>Anime</h2>
+          </div>
+        <div id="anime"></div>
+      </div>
+
+      <!-- FAQ -->
+       
+       <div class="faq">
+        <div class="faq-title">
+        <h1>Frequently Asked Questions</h1>
+      </div>
+        <div class="faq-list">
+            <p>What is DevSphere?</p>
+        </div>
+        <div class="faq-list">
+            <p>How much does DevSphere Cost?</p>
+        </div>
+        <div class="faq-list">
+            <p>Where can i Watch?</p>
+        </div>
+        <div class="faq-list">
+            <p>How do i cancel?</p>
+        </div>
+        <div class="faq-list">
+            <p>How can i watch on DevSphere?</p>
+        </div>
+        <div class="faq-list">
+            <p>Is DevSphere good for kids?</p>
+        </div>
+       </div>
+      
+      <!-- Footer Section -->
+
+      <footer class="footer">
+        <div class="f-section-1">
+            <p>Questions? Call 000-800-919-1743</p>
+        </div>
+        <div class="f-section-2">
+            <div class="f-list1">
+                <div>
+                <p>FAQ</p>
+                <p>Investor Relations</p>
+                <p>Privacy</p>
+                <p>Speed Test</p>
+                </div>
+                <div>
+                <p>Helo Center</p>
+                <p>Jobs</p>
+                <p>Cookie Preferences</p>
+                <p>Legal Nitices</p>
+                </div>
+            </div>
+            <div class="f-list2">
+                <div>
+                <p>Account</p>
+                <p>Ways to Watch</p>
+                <p>Corporate Information</p>
+                <p>Only on DevSphere</p>
+                </div>
+                <div>
+                <p>Media Center</p>
+                <p>Terms of Use</p>
+                <p>Corporates</p>
+                <p><a href="/Contact Page/contact.html">Contact Us</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="f-section-3">
+            <select>
+                <option>English</option>                
+                <option>Tamil</option>                
+                <option>Spanish</option>                
+                <option>German</option>                
+                <option>French</option>                
+            </select>
+            <p>&copy; DevSphere India</p>
+            <p>This page is protected by Google reCAPTCHA to ensure you're not a bot.</p>
+        </div>
+      </footer>
+
+      <!-- Javascript link -->
+       <script src="script.js"></script>
+
 </body>
 </html>

@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 body{
     background-color: black;
@@ -8,13 +9,19 @@ body{
     font-weight: 400;
     font-style: normal;
 }
-nav{
-    margin: 1vw 1vw 0vw 1vw;
+.body::-webkit-scrollbar{
+    display: none;
+}
+.navbar{
     color: white;
+    background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: solid 1px white;
+    padding: 20px;
+    position: sticky;
+    top: 0px;
+    z-index: 5;
 }
 .p-name{
     color: red;
@@ -30,32 +37,410 @@ nav{
 .nav-lists__list{
     display: flex;
     justify-content: right;
-    gap: 1vw;
-}
-.nav-lists li{
+    gap: 2vw;
     list-style: none;
 }
-.nav-lists li:hover{
+.nav-lists__navs a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.nav-lists__navs a:hover{
     color: red;
     cursor: pointer;
+}
+.nav-buttons{
+    display: flex;
+    gap: 30px;
 }
 .signin{
     background-color: red;
     color: black;
     border: none;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+}
+.signin:hover{
+    background-color: rgb(207, 17, 17);
+    cursor: pointer;
+}
+.signup{
+    background-color: red;
+    color: black;
+    border: none;
+    padding: 0.5vw;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+}
+.signup:hover{
+    background-color: rgb(207, 17, 17);
+    cursor: pointer;
 }
 .menu-icon{
     display: none;
 }
 @media screen and (max-width:900px) {
 
-    .menu-icon {
+    #menu-icon {
         display: block;
     }
 
     .nav-lists {
         display: none;
     }
+    .nav-buttons{
+        display: none;
+    }
   
+}
+
+/* Search Section */
+#search-container{
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+#search-container .overlay{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgb(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+}
+#search-icon button{
+    background: transparent;
+    all: unset;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 10px;
+}
+#search-layout{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    z-index: 100;
+}
+#search-layout #search-close{
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+#search-layout #search-close:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+#search-layout input{
+    margin-top: 48px;
+    padding: 8px 40px;
+    width: 80%;
+    max-width: 780px;
+    height: 56px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+#search-layout #search-content{
+    width: 100%;
+    height: 100%;
+    margin-top: 24px;
+    padding: 24px 16px;
+    margin: 1vw 1vw 0vw 1vw;
+    color: white;
+    display: flex;
+    gap: 30px;
+    overflow-x: scroll;
+}
+#search-layout #search-content::-webkit-scrollbar{
+    display: none;
+}
+#search-icon button:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Sidebar */
+#sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 30%;
+    z-index: 10;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-left: -40%;
+    transition: 1s;
+}
+#menu-close{
+    display: flex;
+    justify-content: end;
+    padding: 5px;
+}
+#menu-close i:hover{
+    color: red;
+    cursor: pointer;
+}
+.sidebar-navs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sidebar-navs p{
+    margin-top: 10px;
+}
+.sidebar-navlist a{
+    text-decoration: none;
+    color: white;
+}
+.sidebar-navlist a:hover{
+    color: red;
+    border-bottom: solid white 1px;
+    cursor: pointer;
+}
+.sidebar-buttons{
+    margin-top: 10px;
+}
+.sidebar-signin{
+    padding: 10px 20px 10px 20px;
+    width: 100%;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.sidebar-signin:hover{
+    background-color: rgb(207, 17, 17);
+    cursor: pointer;
+}
+.sidebar-signup{
+    padding: 10px 20px 10px 20px; 
+    width: 100%;  
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.sidebar-signup:hover{
+    background-color: rgb(207, 17, 17);
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section{
+    margin-top: 40px;
+    border: solid white 2px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    width: 100%;
+}
+.movie-images{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}
+.slide{
+    width:100%;
+    flex-shrink:0;
+    padding:3% 20%;
+}
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:20px;
+}
+#left-arrow{
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    z-index: 3;
+}
+#right-arrow{
+    position: absolute;
+    top: 45%;
+    right: 10%;
+}
+.watchnow{
+    position: absolute;
+    top: 80%;
+    left: 45%;
+}
+.watchnow button{
+    border: none;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    z-index: 3;
+    display: block;
+}
+.watchnow button:hover{
+    background-color: rgb(215, 215, 215);
+}
+
+/* Movies section */
+.title{
+    color: white;
+    margin: 30px 1vw 30px 1vw;
+}
+#movies{
+    margin: 1vw 1vw 0vw 1vw;
+    color: white;
+    display: flex;
+    gap: 30px;
+    overflow-x: scroll;
+}
+#movies::-webkit-scrollbar{
+    display: none;
+}
+.movie-image{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    border: solid white 1px;
+}
+.movie-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.movie-card{
+    margin-bottom: 20px;
+}
+.movie-title {
+    text-align: center;
+}
+
+/* Series */
+#series{
+    margin: 1vw 1vw 0vw 1vw;
+    color: white;
+    display: flex;
+    gap: 30px;
+    overflow-x: scroll;
+}
+#series::-webkit-scrollbar{
+    display: none;
+}
+
+/* Anime */
+#anime{
+    margin: 1vw 1vw 10vw 1vw;
+    color: white;
+    display: flex;
+    gap: 30px;
+    overflow-x: scroll;
+}
+#anime::-webkit-scrollbar{
+    display: none;
+}
+
+/* FAQ */
+.faq-title{
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+.faq-title h1{
+    text-align: left;
+}
+.faq{
+    margin:10px 0 50px 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.faq-list{
+    height: 50px;
+    width: 70%;
+    padding: 10px;
+    background-color: rgb(75, 74, 74);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 24px;
+}
+.faq-list:hover{
+    background-color: rgb(104, 104, 104);
+    cursor: pointer;
+}
+
+/* Footer */
+.footer{
+    margin: 100px 30px 100px 30px;
+    padding-top: 100px;
+    color: lightgray;
+    border-top: solid white 0.5px;
+}
+.f-section-2{
+    margin-top: 20px;
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+}
+.f-list1{
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+}
+.f-list1 p{
+    margin-top: 20px;
+}
+.f-list1 p:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.f-list2{
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+}
+.f-list2 p{
+    margin-top: 20px;
+}
+.f-list2 p:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.f-list2 p a{
+    cursor: pointer;
+    text-decoration: none;
+    color: lightgray;
+}
+.f-section-3{
+    margin-top: 30px;
+}
+.f-section-3 select{
+    margin-top: 30px;
+}
+.f-section-3 p{
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.f-section-3 select{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
 }
 
