@@ -11,16 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Mock Data for Carousels
   const animeData = [
-    { title: 'Neon Pulse', image: 'assets/images/poster_1.png' },
-    { title: 'Spirit Forest', image: 'assets/images/poster_2.png' },
-    { title: 'Armored Odyssey', image: 'assets/images/poster_3.png' },
-    { title: 'Starry Night Archives', image: 'assets/images/poster_4.png' },
-    { title: 'Desert of Lost Dreams', image: 'assets/images/poster_5.png' },
-    { title: 'Cybernetic Soul', image: 'assets/images/poster_1.png' },
-    { title: 'Whispers of the Kami', image: 'assets/images/poster_2.png' },
-    { title: 'Mecha Front', image: 'assets/images/poster_3.png' },
-    { title: 'Magic High', image: 'assets/images/poster_4.png' },
-    { title: 'Wasteland Drifter', image: 'assets/images/poster_5.png' }
+    { title: 'Neon Pulse', image: 'assets/anime-images/poster_1.png' },
+    { title: 'Spirit Forest', image: 'assets/anime-images/poster_2.png' },
+    { title: 'Armored Odyssey', image: 'assets/anime-images/poster_3.png' },
+    { title: 'Starry Night Archives', image: 'assets/anime-images/poster_4.png' },
+    { title: 'Desert of Lost Dreams', image: 'assets/anime-images/poster_5.png' },
+    { title: 'Cybernetic Soul', image: 'assets/anime-images/poster_1.png' },
+    { title: 'Whispers of the Kami', image: 'assets/anime-images/poster_2.png' },
+    { title: 'Mecha Front', image: 'assets/anime-images/poster_3.png' },
+    { title: 'Magic High', image: 'assets/anime-images/poster_4.png' },
+    { title: 'Wasteland Drifter', image: 'assets/anime-images/poster_5.png' }
   ];
 
   // Helper function to create card HTML
