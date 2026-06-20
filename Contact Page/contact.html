@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>contact us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <script src="contact.js"></script>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div style="
+background:black;
+height:70px;
+box-shadow:0 8px 25px rgba(255,255,255,0.10), 0 2px 12px rgba(0,0,0,0.6);
+">
+
+        <div style="
+    width:100%;
+    height:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 50px;
+    box-sizing:border-box;
+    margin:0;
+">
+
+            <div style="display:flex;align-items:center;gap:15px;">
+
+                <div class="netflix" style="
+            color:#e50914;
+            font-size:38px;
+            font-weight:bold;">
+                    NETFLIX
+                </div>
+
+                <div style="
+            width:1px;
+            height:35px;
+            background:gray;">
+                </div>
+
+                <div class="helpcenter" style="
+            color:white;
+            font-size:20px;">
+                    Help Center
+                </div>
+
+            </div>
+
+            <div id="desktopButtons" style="display:flex;gap:20px;">
+
+                <button style="
+    background:black;
+    color:white;
+    border:1px solid #666;
+    padding:12px 20px;
+    border-radius:5px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;" onmouseover="this.style.border='1px solid white'" onmouseout="this.style.border='1px solid #666'">
+                    Sign In
+                </button>
+
+                <button style="
+    background:#e50914;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:5px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                    Sign Up
+                </button>
+
+
+            </div>
+            <i id="menuIcon" class="fa-solid fa-bars" onclick="toggleMenu()" style="
+display:none;
+color:white;
+font-size:25px;
+cursor:pointer;
+"></i>
+            <div id="mobileMenu" style="
+display:none;
+position:absolute;
+top:50px;
+right:0;
+width:140px;
+background:#e5e5e5;
+padding:15px;
+border-radius:3px;
+box-shadow:0 2px 8px rgba(0,0,0,.3);
+z-index:1000;
+">
+
+                <div onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"
+                    style="
+    padding:10px 0;
+    font-size:18px;
+    color:black;
+    cursor:pointer;
+    ">
+                    <a>Sign In</a>
+                </div>
+
+                <div onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"
+                    style="
+    padding:10px 0;
+    font-size:18px;
+    color:black;
+    cursor:pointer;
+    ">
+                    <a>Sign Up</a>
+                </div>
+
+            </div>
+            
+
+        </div>
+
+    </div>
+        <style>
+.menu-item{
+    padding:10px 0;
+    font-size:18px;
+}
+
+.menu-item a{
+    color:black;
+    text-decoration:none;
+}
+
+.menu-item a:hover{
+    text-decoration:underline;
+}
+</style>
+
+
+
+        <!-- CONTENT -->
+
+        <div style="background-color: #000000;">
+            <div class="contact-form-container">
+                <h2>Contact Us</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- FOOTER -->
+
+        <footer
+            style=" background:radial-gradient(circle at top right,#b30000 0%,#5a0000 25%,#000000 65%); padding:50px 0; margin-top:0px; box-shadow: inset 0 15px 30px #060606; ">
+            <div style="max-width:850px; margin:auto; padding:40px 20px 30px;">
+
+                <select style="
+    width:290px;
+    height:55px;
+    background:transparent;
+    color:#8c8c8c;
+    border:1px solid #555;
+    padding-left:20px;
+    font-size:18px;
+    margin-bottom:50px;
+    ">
+
+                    <option>Select a language</option>
+                    <option>Arabic</option>
+                    <option>Chinese</option>
+                    <option>Croatian</option>
+                    <option>Danish</option>
+                    <option>Dutch</option>
+                    <option>English</option>
+                    <option>Filipino</option>
+                    <option>French</option>
+                    <option>German</option>
+                    <option>Hindi</option>
+                    <option>Indonesian</option>
+                    <option>Japanese</option>
+                    <option>Korean</option>
+                    <option>Malay</option>
+                    <option>Norwegian</option>
+                    <option>Polish</option>
+                    <option>Russian</option>
+                    <option>Spanish</option>
+                    <option>Thai</option>
+                    <option>Ukrainian</option>
+                    <option>Vietnamese</option>
+                </select>
+
+                <div style="
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+    ">
+
+                    <a href="Terms of use.html" onmouseover="this.style.textDecoration='underline'"
+                        onmouseout="this.style.textDecoration='none'" style="
+           color:#d4d4d4;
+           text-decoration:none;
+           font-size:18px;">
+                        Terms of Use
+                    </a>
+
+                    <a href="privacy.html" onmouseover="this.style.textDecoration='underline'"
+                        onmouseout="this.style.textDecoration='none'" style="
+           color:#d4d4d4;
+           text-decoration:none;
+           font-size:18px;">
+                        Privacy
+                    </a>
+
+                    <a href="cookie preferences.html" onmouseover="this.style.textDecoration='underline'"
+                        onmouseout="this.style.textDecoration='none'" onclick="openModal(); return false;" style="
+      color:#d4d4d4;
+      text-decoration:none;
+      font-size:18px;">
+                        Cookie Preferences
+                    </a>
+
+                    <a href="corporate.html" onmouseover="this.style.textDecoration='underline'"
+                        onmouseout="this.style.textDecoration='none'" style="
+           color:#d4d4d4;
+           text-decoration:none;
+           font-size:18px;">
+                        Corporate Information
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+        </footer>
