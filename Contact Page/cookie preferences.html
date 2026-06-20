@@ -357,7 +357,7 @@ function closeModal(){
 
 </script>
 
-<style>
+
 
 
 <style>
@@ -407,8 +407,114 @@ select{
     max-width:90vw !important;
     box-sizing:border-box;
 }
+/* ==========================================
+   STRICT DESKTOP LAYOUT SCALED FOR MOBILE
+   ========================================== */
+@media (max-width: 768px) {
+    /* Retain side-by-side flexbox wrapper constraints */
+    .cookie-modal {
+        width: 98%;
+        max-width: 98%;
+    }
+
+    /* Force desktop-style split screen columns */
+    .main {
+        display: flex;
+        flex-direction: row !important; 
+        min-height: 380px;
+    }
+
+    /* Keep sidebar on the left side with trimmed width */
+    .sidebar {
+        width: 180px !important; 
+        flex-shrink: 0;
+        background: #1f1f1f;
+    }
+
+    /* Scale sidebar text down uniformly */
+    .menu {
+        padding: 10px 12px;
+        font-size: 11px;
+        line-height: 1.3;
+    }
+
+    .menu.active {
+        border-left: 3px solid #E50914; /* Keep the vertical red accent bar */
+    }
+
+    /* Condense primary presentation container text */
+    .content {
+        flex: 1;
+        padding: 15px;
+    }
+
+    .content h2 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .content p {
+        font-size: 11px;
+        line-height: 1.4;
+        margin-bottom: 12px;
+    }
+
+    /* Compress toggle row structure */
+    .toggle-row {
+        padding: 8px 10px;
+        margin-bottom: 12px;
+        font-size: 11px;
+    }
+
+    /* Micro On/Off Slider Adjustment */
+    .switch {
+        width: 40px;   /* Shrinks container base */
+        height: 22px;  
+        flex-shrink: 0;
+    }
+
+    .slider:before {
+        height: 14px;  /* Micro indicator ball dimensions */
+        width: 14px;   
+        left: 4px;
+        bottom: 4px;
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(18px); /* Shifts perfectly into scale track bounds */
+    }
+
+    /* Compact Header elements to match standard layout */
+    .header {
+        padding: 12px 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .header h1 {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+
+    .close {
+        font-size: 24px;
+    }
+
+    /* Compact Footer elements */
+    .footer {
+        padding: 12px 15px;
+    }
+
+    .save-btn {
+        padding: 10px 20px;
+        font-size: 13px;
+        width: auto;
+    }
+}
 </style>
-</style>
+
 
 
 
