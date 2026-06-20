@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="signup.css">
+    <!-- Google Fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Font Awesone Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="Nav">
+        <h1 class="Nav-Logo">DevSphere</h1>
+        <button id="Homebtn">Return to Home</button>
+    </div>
+
+    <!-- Signup -->
+
+    <div class="Container">
+
+        <div class="Head">
+            <h1>Create Account</h1>
+            <p>Enter details to Signup</p>
+        </div>
+
+        <form class="Form">
+
+            <div class="Form-label">
+
+                <label>Username</label>
+                <input type="text" id="username" placeholder="Enter Username">
+
+                <br>
+
+                <label>Email</label>
+                <input type="email" id="email" placeholder="Enter Email">
+
+                <br>
+
+                <label>Password</label>
+                <input type="password" id="password" placeholder="Enter Password">
+
+                <br> 
+
+                <label>Confirm Password</label>
+                <input type="password" id="confirm" placeholder="Confirm Password">
+
+                <br>
+
+                <button type="submit">Create Account</button>
+            </div>
+         </form>
+
+        <div class="Create">
+            <p>
+                Already have account?
+                <a href="../Signin Page/signin.html">Signin</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p class="copyright">&copy;2024 DevSphere</p>
+    </footer>
+
+    <script src="signup.js"></script>
+
+</body>
+
+</html>

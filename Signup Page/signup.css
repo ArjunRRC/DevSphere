@@ -1,0 +1,226 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.Nav {
+    margin: 1vw 1vw 0vw 1vw;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px white;
+}
+
+.Nav-Logo {
+    color: red;
+}
+
+.Nav button {
+    padding: 10px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+.Container {
+    background-color: #181818;
+    width: 50%;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 80px auto;
+    color: white
+}
+
+.Head {
+    margin-top: 7px;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.Form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Form-label {
+    width: 360px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.Form input {
+    width: 360px;
+    padding: 12px;
+    margin-bottom: 20px;
+
+    background-color: #242424;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+}
+
+.Form button {
+    width: 100%;
+    padding: 10px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+.Create {
+    text-align: center;
+}
+
+.Create a {
+    color: red;
+}
+
+footer {
+  padding: 4rem 15%;
+  color: #737373;
+  font-size: 0.85rem;
+}
+
+.copyright {
+  font-size: 0.75rem;
+}
+
+
+@media (max-width:768px){
+
+.Nav{
+display:flex;
+flex-direction:column;
+gap:15px;
+
+text-align:center;
+}
+
+.Nav-Logo{
+font-size:34px;
+}
+
+.Nav button{
+padding:8px 14px;
+}
+
+.Container{
+width:85%;
+
+margin:50px auto;
+
+padding:30px 20px;
+}
+
+.Head h1{
+font-size:40px;
+}
+
+.Head p{
+font-size:16px;
+}
+
+.Form{
+display:flex;
+
+justify-content:center;
+}
+
+.Form-label{
+width:100%;
+}
+
+.Form input{
+width:100%;
+
+padding:12px;
+
+margin-bottom:20px;
+
+box-sizing:border-box;
+}
+
+.Form button{
+width:100%;
+}
+
+.Create{
+text-align:center;
+}
+
+.footer-links{
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:10px;
+}
+
+}
+
+
+@media (max-width:480px){
+
+.Nav-Logo{
+font-size:28px;
+}
+
+.Nav button{
+font-size:12px;
+}
+
+.Container{
+
+width:92%;
+
+padding:25px 15px;
+
+border-radius:15px;
+}
+
+.Head h1{
+font-size:30px;
+}
+
+.Head p{
+font-size:14px;
+}
+
+.Form label{
+font-size:15px;
+}
+
+.Form input{
+width:100%;
+
+padding:10px;
+}
+
+.Form button{
+width:100%;
+padding:12px;
+}
+
+.Create{
+font-size:14px;
+}
+
+footer{
+padding:20px;
+}
+
+}
+
