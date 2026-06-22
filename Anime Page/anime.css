@@ -541,4 +541,7 @@ footer {
   .footer-links {
     grid-template-columns: repeat(2, 1fr);
   }
+  .nav-links {
+    display: none;
+  }
 }
